@@ -13,7 +13,7 @@ class Maybe extends Monad {
 
     public function bind($function) { 
         if ($this->value === null) {
-            return new Maybe(null);
+            return self::pure(null);
         }
         else {
             return $function($this->value);
