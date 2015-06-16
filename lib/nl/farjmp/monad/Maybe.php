@@ -4,12 +4,10 @@ namespace nl\farjmp\monad;
 
 class Maybe extends Monad {
 
-    protected $value;
 
     public function __construct($value) {
-        $this->value = $value;
+        parent::__construct($value);
     }
-
 
     public function bind($function) { 
         if ($this->value === null) {

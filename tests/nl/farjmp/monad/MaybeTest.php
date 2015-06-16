@@ -18,4 +18,9 @@ class MaybeTest extends \PHPUnit_Framework_TestCase
             $testCase->assertEquals($testValue, $value);
         });
     }
+
+    public function testEscape() {
+        $this->assertEquals(null, Maybe::pure(null)->escape());
+        $this->assertEquals(42, Maybe::pure(42)->escape());
+    }
 }
