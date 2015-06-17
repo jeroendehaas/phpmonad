@@ -1,5 +1,5 @@
 {
-    "name": "farjmp/libmonad",
+    "name": "farjmp/phpmonads",
     "require-dev": {
         "phpunit/phpunit": "^4.7"
     },
