@@ -41,4 +41,8 @@ class Maybe {
             throw new \Exception("Trying to get a value out of Nothing");
         }
     }
+
+    public function getOrElse($default) {
+        return $this->isJust() ? $this->getJust() : $default;
+    }
 }
