@@ -45,4 +45,16 @@ class Maybe {
     public function getOrElse($default) {
         return $this->isJust() ? $this->getJust() : $default;
     }
+
+    /**
+     * Returns the value of a Just instance or
+     * the result of the given function if this Maybe
+     * is a Nothing.
+     *
+     * @param function Function to call if isNothing(), should return a value.
+     * @return mixed
+     */
+    public function getOrElseFn($function) {
+        return $this->isJust() ? $this->getJust() : $function();
+    }
 }
